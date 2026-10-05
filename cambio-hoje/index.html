@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Câmbio Hoje — conversor BRL, USD, EUR e BTC com cotação viva (Banco Central + CoinGecko). Quanto vale seu dinheiro agora?">
+  <title>Câmbio Hoje — Conversor BRL, USD, EUR e BTC</title>
+</head>
+<body>
+  <header>
+    <h1>Câmbio Hoje</h1>
+    <p>Quanto vale seu dinheiro agora? Conversor com cotação viva.</p>
+    <nav>
+      <ul>
+        <li><a href="#ferramenta">Conversor</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="ferramenta">
+      <h2>Serviço / Ferramenta</h2>
+      <form id="conversor-form" action="#" method="get">
+        <div>
+          <label for="valor">Valor:</label>
+          <input type="number" id="valor" name="valor" value="100" min="0" step="0.01" required>
+        </div>
+        <div>
+          <label for="de">De:</label>
+          <select id="de" name="de">
+            <option value="BRL" selected>Real (BRL)</option>
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BTC">Bitcoin (BTC)</option>
+          </select>
+        </div>
+        <div>
+          <label for="para">Para:</label>
+          <select id="para" name="para">
+            <option value="BRL">Real (BRL)</option>
+            <option value="USD" selected>Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BTC">Bitcoin (BTC)</option>
+          </select>
+        </div>
+        <button type="submit">Converter</button>
+      </form>
+      <div id="resultado" aria-live="polite">
+        <h3>Resultado</h3>
+        <p>Digite um valor e clique em Converter. (Incremento 1: cálculo + cotação viva via BCB e CoinGecko entram no JS.)</p>
+      </div>
+      <p><small>Fontes previstas: PTAX/SGS do Banco Central (api.bcb.gov.br, sem chave, com CORS) + CoinGecko keyless (api.coingecko.com, sem chave, com CORS).</small></p>
+    </section>
+
+    <section id="anuncio" aria-label="Espaço publicitário">
+      <h2>Espaço publicitário (bônus)</h2>
+      <p>Banner 300x250 reservado para monetização (ex.: corretoras, cartões de viagem). Sem rastreadores nesta versão.</p>
+    </section>
+
+    <section id="como-funciona">
+      <h2>Conteúdo complementar / instruções</h2>
+      <h3>Como usar</h3>
+      <ol>
+        <li>Digite o valor</li>
+        <li>Escolha a moeda de origem e de destino</li>
+        <li>Clique em Converter e veja o resultado em segundos</li>
+      </ol>
+      <h3>Moedas suportadas (v1)</h3>
+      <ul>
+        <li>BRL — Real brasileiro (PTAX BCB)</li>
+        <li>USD — Dólar americano (PTAX BCB)</li>
+        <li>EUR — Euro (PTAX BCB)</li>
+        <li>BTC — Bitcoin (CoinGecko)</li>
+      </ul>
+      <h3>Estratégia de monetização (opcional)</h3>
+      <p>Espaço para anúncios + links de afiliados de corretoras, sem comprometer o uso gratuito e rápido da ferramenta.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Câmbio Hoje — Projeto da disciplina Programação para Web 1 (UTFPR).</p>
+    <p>Feito por <a href="../site-pessoal/index.html">Gabriel Baldo</a> — <a href="https://github.com/Gabriel-Baldo">GitHub</a></p>
+  </footer>
+</body>
+</html>
