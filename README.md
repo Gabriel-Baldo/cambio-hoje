@@ -1,23 +1,30 @@
-# Programação para Web 1 — UTFPR (turma extra)
+# Câmbio Hoje — Conversor BRL ⇄ USD/EUR/BTC
 
-Repositório incremental da disciplina. Projeto versionado em Git com publicação no GitHub Pages.
+Serviço web da disciplina **Programação para Web 1 (UTFPR)**: conversor com cotação viva, 100% front estático (HTML + CSS + JS puro, sem back-end próprio).
 
-## Estrutura
+> Projeto 1 (site pessoal) mora no repo **[portfolio](https://github.com/Gabriel-Baldo/portfolio)**. Este repo é o Projeto 2 + base do Projeto Final (refatoração React).
 
-- `site-pessoal/` → Projeto incremental 1: Site pessoal
-  - Etapa 1: HTML puro (esta versão — sem CSS de propósito)
-  - Etapa 2: + CSS
-  - Etapa 3: Mobile First + Flexbox/Grid responsivo
-- `cambio-hoje/` → Projeto incremental 2: Serviço web rentável
-  - **Câmbio Hoje** — conversor BRL ⇄ USD/EUR/BTC com cotação viva
-  - APIs: BCB SGS/PTAX (oficial, sem chave, com CORS) + CoinGecko keyless
-  - Evolução: JS básico → DOM/eventos → localStorage → fetch → async → Web APIs → Pages
+- **APIs:** PTAX/SGS do Banco Central (`api.bcb.gov.br`, sem chave, com CORS) + CoinGecko keyless (`api.coingecko.com`, sem chave, com CORS)
+- **Layout exigido:** HEADER / FERRAMENTA / ANÚNCIO 300x250 / instruções / FOOTER com link pro site pessoal
+
+## Rodar com Docker (recomendado)
+
+```bash
+docker compose up --build
+# http://localhost:8080
+```
+
+## Rodar sem Docker
+
+```bash
+python3 -m http.server 8080
+# http://localhost:8080
+```
 
 ## Publicação (GitHub Pages)
 
-- Site pessoal: `https://<usuario>.github.io/<repo>/site-pessoal/`
-- Câmbio Hoje: `https://<usuario>.github.io/<repo>/cambio-hoje/`
+Settings → Pages → Deploy from branch → `main` /root. O `index.html` está na raiz de propósito.
 
-## Autor
+## Evolução (7 incrementos do Projeto 2)
 
-Gabriel Baldo — https://github.com/Gabriel-Baldo
+1. JS básico → 2. DOM/eventos → 3. localStorage → 4. fetch APIs → 5. async/Promise.all → 6. Web APIs (Clipboard/Share/Geolocation) → 7. Pages + monetização
