@@ -2,7 +2,11 @@
 
 Serviço web da disciplina **Programação para Web 1 (UTFPR)**: conversor com cotação viva, 100% front estático (HTML + CSS + JS puro, sem back-end próprio).
 
-> Projeto 1 (site pessoal) mora no repo **[portfolio](https://github.com/Gabriel-Baldo/portfolio)**. Este repo é o Projeto 2 + base do Projeto Final (refatoração React).
+> Projeto 1 (site pessoal) mora no repo **[portfolio](https://github.com/Gabriel-Baldo/portfolio)**. Este repo é **só o Projeto 2** + base do Projeto Final (refatoração React) — sem código do site pessoal aqui.
+>
+> Histórico: a Etapa 1 do site pessoal (HTML puro) foi versionada neste repo antes da separação — ver `git log` (commits até `e70bf0a`).
+
+## Escopo deste repo (Projeto 2)
 
 - **APIs:** PTAX/SGS do Banco Central (`api.bcb.gov.br`, sem chave, com CORS) + CoinGecko keyless (`api.coingecko.com`, sem chave, com CORS)
 - **Layout exigido:** HEADER / FERRAMENTA / ANÚNCIO 300x250 / instruções / FOOTER com link pro site pessoal
