@@ -1,0 +1,65 @@
+/* Câmbio Hoje — CSS base (mobile-first, sem framework). */
+:root {
+  --bg: #0c0e12;
+  --painel: #14171d;
+  --borda: #262b34;
+  --texto: #e8eaf0;
+  --suave: #a7adba;
+  --destaque: #7dd3a8;
+  --max: 720px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--texto);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+a { color: var(--destaque); }
+header, main, footer { max-width: var(--max); margin: 0 auto; padding: 0 1.2rem; }
+header { padding-top: 2rem; }
+h1 { margin: 0 0 .2rem; }
+header p, nav { color: var(--suave); }
+nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; }
+nav a { color: var(--suave); text-decoration: none; }
+nav a:hover { color: var(--texto); }
+section {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-top: 1.2rem;
+}
+form div { margin-bottom: .8rem; }
+label { display: block; font-weight: 600; margin-bottom: .3rem; }
+input, select {
+  width: 100%; max-width: 100%;
+  padding: .6rem .8rem; font-size: 1rem; font-family: inherit;
+  color: var(--texto); background: var(--bg);
+  border: 1px solid var(--borda); border-radius: 10px;
+}
+input:focus, select:focus { outline: 2px solid var(--destaque); border-color: var(--destaque); }
+button {
+  padding: .6rem 1.2rem; font-size: 1rem; font-weight: 700;
+  color: #06110b; background: var(--destaque);
+  border: 1px solid var(--destaque); border-radius: 999px; cursor: pointer;
+}
+button:hover { filter: brightness(1.08); }
+#resultado .valor { font-size: 1.8rem; font-weight: 800; margin: .4rem 0; }
+#status { color: var(--suave); }
+.anuncio-box {
+  max-width: 300px; min-height: 250px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed var(--borda); border-radius: 10px;
+  color: var(--suave); font-size: .85rem; text-align: center; padding: 1rem;
+}
+footer { color: var(--suave); padding: 2rem 1.2rem 3rem; font-size: .9rem; }
+img { max-width: 100%; height: auto; }
+
+@media (min-width: 640px) {
+  form {
+    display: grid; grid-template-columns: 1fr 1fr 1fr auto;
+    gap: .8rem; align-items: end;
+  }
+  form div { margin-bottom: 0; }
+}

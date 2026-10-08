@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Câmbio Hoje — conversor BRL, USD, EUR e BTC com cotação viva (Banco Central + CoinGecko). Quanto vale seu dinheiro agora?">
   <title>Câmbio Hoje — Conversor BRL, USD, EUR e BTC</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -48,14 +49,14 @@
       </form>
       <div id="resultado" aria-live="polite">
         <h3>Resultado</h3>
-        <p>Digite um valor e clique em Converter. (Incremento 1: cálculo + cotação viva via BCB e CoinGecko entram no JS.)</p>
+        <p>Carregando cotações…</p>
       </div>
-      <p><small>Fontes previstas: PTAX/SGS do Banco Central (api.bcb.gov.br, sem chave, com CORS) + CoinGecko keyless (api.coingecko.com, sem chave, com CORS).</small></p>
+      <p id="status" aria-live="polite"><small>Fontes: SGS do Banco Central (api.bcb.gov.br, sem chave) + CoinGecko keyless (api.coingecko.com, sem chave).</small></p>
     </section>
 
     <section id="anuncio" aria-label="Espaço publicitário">
       <h2>Espaço publicitário (bônus)</h2>
-      <p>Banner 300x250 reservado para monetização (ex.: corretoras, cartões de viagem). Sem rastreadores nesta versão.</p>
+      <div class="anuncio-box">Banner 300×250 reservado para monetização (ex.: corretoras, cartões de viagem). Sem rastreadores nesta versão.</div>
     </section>
 
     <section id="como-funciona">
@@ -82,5 +83,7 @@
     <p>© 2026 Câmbio Hoje — Projeto da disciplina Programação para Web 1 (UTFPR).</p>
     <p>Feito por <a href="https://github.com/Gabriel-Baldo/portfolio">Gabriel Baldo</a> — <a href="https://github.com/Gabriel-Baldo">GitHub</a></p>
   </footer>
+
+  <script src="js/app.js" defer></script>
 </body>
 </html>

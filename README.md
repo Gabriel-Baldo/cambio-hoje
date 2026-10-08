@@ -31,4 +31,10 @@ Settings → Pages → Deploy from branch → `main` /root. O `index.html` está
 
 ## Evolução (7 incrementos do Projeto 2)
 
-1. JS básico → 2. DOM/eventos → 3. localStorage → 4. fetch APIs → 5. async/Promise.all → 6. Web APIs (Clipboard/Share/Geolocation) → 7. Pages + monetização
+- [x] 1. JS básico — `js/app.js`: primeira versão funcional (cálculo + fetch BCB/CoinGecko)
+- [x] 2. DOM/eventos — converte sem recarregar (submit + input/change)
+- [ ] 3. localStorage — histórico + moedas favoritas
+- [ ] 4. fetch APIs — (base pronta; expandir: gráfico 7 dias)
+- [ ] 5. async/Promise.all — (base usa `Promise.all`; expandir: requisições independentes do gráfico)
+- [ ] 6. Web APIs — Clipboard/Share/Geolocation
+- [ ] 7. Pages + monetização
