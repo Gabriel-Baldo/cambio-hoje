@@ -1,6 +1,3 @@
-// Câmbio Hoje — Incrementos 1 (JS básico) e 2 (DOM + eventos, sem reload).
-// Fontes (sem chave, com CORS): BCB SGS (USD série 1, EUR série 21619) + CoinGecko (BTC).
-// JS puro, sem dependências.
 (function () {
   'use strict';
 
@@ -10,7 +7,7 @@
   var FIAT = ['BRL', 'USD', 'EUR'];
 
   var state = {
-    rates: { BRL: 1 }, // taxa em BRL por 1 unidade
+    rates: { BRL: 1 },
     date: null,
     loading: false,
   };
@@ -26,7 +23,6 @@
     if (statusEl) statusEl.textContent = msg;
   }
 
-  // Inc 1: variáveis, tipos, operadores, condicionais, funções, arrays e objetos.
   function parseValor(raw) {
     var n = parseFloat(String(raw).replace(',', '.'));
     return isNaN(n) || n < 0 ? null : n;
@@ -101,7 +97,6 @@
     });
   }
 
-  // Inc 2: interação sem recarregar a página.
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     render();
