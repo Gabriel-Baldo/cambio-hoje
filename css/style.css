@@ -20,7 +20,7 @@ a { color: var(--fosforo); }
 header, main, footer { max-width: var(--max); margin: 0 auto; padding: 0 1.2rem; }
 header { padding-top: 1.6rem; border-bottom: 1px solid var(--filete); padding-bottom: 1rem; }
 header::before {
-  content: "COTAÇÃO VIVA · BCB + COINGECKO";
+  content: "BCB · COINGECKO";
   display: block;
   font-family: ui-monospace, 'Cascadia Mono', Menlo, Consolas, monospace;
   font-size: .72rem; letter-spacing: .22em;
