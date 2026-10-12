@@ -107,4 +107,17 @@
   });
 
   carregarCotacoes();
+
+  var visitasEl = document.getElementById('visitas');
+  if (visitasEl) {
+    var n = 0;
+    try {
+      n = parseInt(localStorage.getItem('ch-visitas') || '0', 10) || 0;
+      n += 1;
+      localStorage.setItem('ch-visitas', String(n));
+    } catch (e) {
+      n = 0;
+    }
+    visitasEl.textContent = n > 0 ? 'Visitante nº ' + n + ' — obrigado pela visita! Assine o livro de visitas.' : '';
+  }
 })();
